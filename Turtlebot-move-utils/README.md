@@ -9,7 +9,7 @@ A small library of movement and location utility functions for ROS/Turtlebot.
 ##Note:
 To use this library correctly, a few changes must be made to your package's CMakeLists.txt file;
 Add the following lines of code: <br/>
-     `find_package(catkin REQUIRED COMPONENTS roscpp geometry_msgs actionlib actionlib_msgs)`
+     `find_package(catkin REQUIRED COMPONENTS roscpp geometry_msgs actionlib actionlib_msgs)` <br/>
      `generate_messages( DEPENDENCIES std_msgs actionlib_msgs )`
 
 
