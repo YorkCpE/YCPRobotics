@@ -1,0 +1,117 @@
+package edu.ycp.ros.packageUtility;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.io.File;
+import java.io.IOException;
+
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextField;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import javax.swing.JButton;
+import javax.swing.JSplitPane;
+import javax.swing.SwingConstants;
+import javax.swing.GroupLayout;
+import javax.swing.GroupLayout.Alignment;
+import javax.swing.LayoutStyle.ComponentPlacement;
+
+public class NewPackageMenu extends JFrame {
+
+	private JPanel contentPane;
+	private static String DefaultRosInstallDir = "/opt/ros/";
+	private static String RosInstallDir;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					NewPackageMenu frame = new NewPackageMenu();
+					if(!checkForRosInstall()){
+						Log.report(ErrorStrings.ROS_INSTALL_NOT_FOUND);
+						LocateRosInstall();
+					}
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public NewPackageMenu() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		
+		JButton btnSelectDestinationDirectory = new JButton("Select Destination Directory");
+		GroupLayout gl_contentPane = new GroupLayout(contentPane);
+		gl_contentPane.setHorizontalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
+					.addComponent(textField, GroupLayout.PREFERRED_SIZE, 180, GroupLayout.PREFERRED_SIZE)
+					.addPreferredGap(ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+					.addComponent(btnSelectDestinationDirectory)
+					.addContainerGap())
+		);
+		gl_contentPane.setVerticalGroup(
+			gl_contentPane.createParallelGroup(Alignment.LEADING)
+				.addGroup(gl_contentPane.createSequentialGroup()
+					.addGap(21)
+					.addGroup(gl_contentPane.createParallelGroup(Alignment.BASELINE)
+						.addComponent(textField, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+						.addComponent(btnSelectDestinationDirectory))
+					.addContainerGap(221, Short.MAX_VALUE))
+		);
+		contentPane.setLayout(gl_contentPane);
+	}
+	
+	public static Boolean checkForRosInstall(){
+		File defaultRosDir = new File(DefaultRosInstallDir);
+		if(defaultRosDir.exists()){
+			RosInstallDir = DefaultRosInstallDir;
+			return true;
+		} else return false;
+	}
+	
+	public static void LocateRosInstall() throws IOException{
+		int reply = JOptionPane.showConfirmDialog(null, "Unable to find ROS in the default install location. Would you like to specify the location of your ROS install?", "ROS Install Directory Not Found", JOptionPane.YES_NO_OPTION);
+		if(reply == JOptionPane.YES_OPTION){
+			JFileChooser fc = new JFileChooser();
+			int returnVal = fc.showOpenDialog(null);
+			fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+			if(returnVal == JFileChooser.APPROVE_OPTION){
+				File rosDir = fc.getSelectedFile();
+				RosInstallDir = rosDir.getCanonicalPath();
+				if(!new File(RosInstallDir.endsWith("/") ? RosInstallDir + "ros" : RosInstallDir + "/ros").exists()){
+					JOptionPane.showConfirmDialog(null, "This directory does not appear to contain a ROS install!", "ROS Install Not Recognized", JOptionPane.OK_OPTION);
+					LocateRosInstall();
+				}
+			} else{
+				Log.report(ErrorStrings.OPERATION_CANCELLED);
+				System.exit(0);
+			}
+		} else{
+			Log.report(ErrorStrings.OPERATION_CANCELLED);
+			System.exit(0);
+		}
+	}
+}

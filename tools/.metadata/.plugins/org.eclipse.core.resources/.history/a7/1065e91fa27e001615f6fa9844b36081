@@ -1,0 +1,5 @@
+package edu.ycp.ros.packageUtility;
+
+public class Log {
+
+}
