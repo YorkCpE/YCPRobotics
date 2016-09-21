@@ -23,21 +23,25 @@ public:
 		
 	}
 
+	void singleVelocityMessage(float linearVelocity, float angularVelocity){
+		geometry_msgs::Twist msg;
+		msg.linear.x = linearVelocity;
+		msg.angular.z = angularVelocity;
+		pub.publish();
+	}
+
 	void moveForSeconds(int numSeconds, float linearVelocity, float angularVelocity){
 		geometry_msgs::Twist msg;
 		msg.linear.x = linearVelocity;
 		msg.angular.z = angularVelocity;
 		ros::Time begin = ros::Time::now();
-		while(ros::Time::now() - begin <= ros::Duration(numSeconds)){
+		while(ros::Time::now() - begin <= ros::Duration(numSeconds) && ros::ok()){
 			pub.publish(msg);
 		}
 	}
 
 	void moveForSeconds(int numSeconds, geometry_msgs::Twist message){
-		ros::Time begin = ros::Time::now();
-		while(ros::Time::now() - begin <= ros::Duration(numSeconds)){
-			pub.publish(message);
-		}
+		moveForSeconds(numSeconds, message.linear.x, message.angular.z);
 	}
 
 	bool moveMeters(float dx, float dy){
@@ -45,7 +49,7 @@ public:
 		//tell the action client that we want to spin a thread by default
   		MoveBaseClient ac("move_base", true);
   		//wait for the action server to come up
-		while(!ac.waitForServer(ros::Duration(5.0))){
+		while(!ac.waitForServer(ros::Duration(5.0)) && ros::ok()){
 			ROS_INFO("Waiting for the move_base action server to come up");
 		}
 
