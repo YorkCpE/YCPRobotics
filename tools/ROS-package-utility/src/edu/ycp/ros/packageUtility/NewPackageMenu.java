@@ -18,6 +18,8 @@ import com.jgoodies.forms.layout.FormSpecs;
 import javax.swing.JButton;
 import javax.swing.JSplitPane;
 import javax.swing.SwingConstants;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
@@ -43,7 +45,7 @@ public class NewPackageMenu extends JFrame {
 				try {
 					NewPackageMenu frame = new NewPackageMenu();
 					if(!checkForRosInstall()){
-						Log.report(ErrorStrings.ROS_INSTALL_NOT_FOUND);
+						Log.report(LogStrings.ROS_INSTALL_NOT_FOUND);
 						LocateRosInstall();
 					}
 					frame.setVisible(true);
@@ -58,7 +60,16 @@ public class NewPackageMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public NewPackageMenu() {
-		setTitle("New ROS Package");
+		try {
+		    for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+		        if ("Nimbus".equals(info.getName())) {
+		            UIManager.setLookAndFeel(info.getClassName());
+		            break;
+		        }
+		    }
+		} catch (Exception e) {}
+		
+		setTitle("ROS Package Utility - New ROS Package");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
@@ -150,11 +161,11 @@ public class NewPackageMenu extends JFrame {
 					LocateRosInstall();
 				}
 			} else{
-				Log.report(ErrorStrings.OPERATION_CANCELLED);
+				Log.report(LogStrings.OPERATION_CANCELLED);
 				System.exit(0);
 			}
 		} else{
-			Log.report(ErrorStrings.OPERATION_CANCELLED);
+			Log.report(LogStrings.OPERATION_CANCELLED);
 			System.exit(0);
 		}
 	}

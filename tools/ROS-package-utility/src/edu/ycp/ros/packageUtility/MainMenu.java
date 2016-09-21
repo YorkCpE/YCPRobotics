@@ -5,6 +5,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import javax.swing.JButton;
@@ -35,15 +37,23 @@ public class MainMenu extends JFrame {
 	 * Create the frame.
 	 */
 	public MainMenu() {
+		try {
+		    for (LookAndFeelInfo info : UIManager.getInstalledLookAndFeels()) {
+		        if ("Nimbus".equals(info.getName())) {
+		            UIManager.setLookAndFeel(info.getClassName());
+		            break;
+		        }
+		    }
+		} catch (Exception e) {}
+	
+		setResizable(false);
+		setTitle("ROS Package Utility");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 286, 56);
+		setBounds(100, 100, 243, 52);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
-		
-		JLabel lblRosPackageUtility = new JLabel("ROS Package Utility");
-		contentPane.add(lblRosPackageUtility, BorderLayout.NORTH);
 		
 		JButton btnNewPackage = new JButton("New Package");
 		btnNewPackage.addActionListener(new ActionListener() {
