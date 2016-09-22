@@ -27,7 +27,7 @@ public:
 		geometry_msgs::Twist msg;
 		msg.linear.x = linearVelocity;
 		msg.angular.z = angularVelocity;
-		pub.publish();
+		pub.publish(msg);
 	}
 
 	void moveForSeconds(int numSeconds, float linearVelocity, float angularVelocity){
