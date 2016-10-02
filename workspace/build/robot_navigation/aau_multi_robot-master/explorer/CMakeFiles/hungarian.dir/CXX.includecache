@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/include/hungarian.h
+iostream
+-
+vector
+-
+
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/hungarian.cpp
+algorithm
+-
+hungarian.h
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/hungarian.h
+limits
+-
+cstddef
+-
+iostream
+-
+printf.h
+-
+stdexcept
+-
+stdio.h
+-
+

@@ -1,0 +1,8 @@
+prefix=/home/carasperbeck/ros_ws/install
+
+Name: FirstLaunchFile
+Description: Description of FirstLaunchFile
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/carasperbeck/ros_ws/install/lib 
+Requires: 
