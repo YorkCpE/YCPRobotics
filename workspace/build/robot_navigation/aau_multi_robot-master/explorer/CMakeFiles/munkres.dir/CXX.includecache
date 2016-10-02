@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/matrix.cpp
+matrix.h
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/matrix.h
+cassert
+-
+cstdlib
+-
+algorithm
+-
+
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/matrix.h
+initializer_list
+-
+matrix.cpp
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/matrix.cpp
+
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/munkres.cpp
+munkres.h
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/munkres.h
+iostream
+-
+cmath
+-
+limits
+-
+
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/munkres.h
+matrix.h
+/home/carasperbeck/ros_ws/src/robot_navigation/aau_multi_robot-master/explorer/src/src/matrix.h
+list
+-
+utility
+-
+

@@ -1,0 +1,40 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/adhoc_communication_generate_messages_lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/MmListOfPoints.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/MmMapUpdate.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/MmPoint.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/CMgrDimensions.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/ExpAuctionElement.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/CMgrRobotUpdate.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/ExpAuction.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/ExpCluster.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/ExpClusterElement.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/ExpFrontier.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/MmControl.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/RecvString.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/MmRobotPosition.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/msg/ExpFrontierElement.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendString.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/ShutDown.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendOccupancyGrid.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendExpCluster.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/BroadcastString.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendMmControl.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/GetNeighbors.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendQuaternion.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendExpFrontier.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/BroadcastCMgrRobotUpdate.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendExpAuction.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendTwist.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/GetGroupState.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendCMgrRobotUpdate.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/ChangeMCMembership.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendMmPoint.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendMmRobotPosition.lisp"
+  "/home/carasperbeck/ros_ws/devel/share/common-lisp/ros/adhoc_communication/srv/SendMmMapUpdate.lisp"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang)
+  INCLUDE(CMakeFiles/adhoc_communication_generate_messages_lisp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)

@@ -1,0 +1,42 @@
+FILE(REMOVE_RECURSE
+  "CMakeFiles/adhoc_communication_generate_messages_py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_MmListOfPoints.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_MmMapUpdate.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_MmPoint.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_CMgrDimensions.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_ExpAuctionElement.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_CMgrRobotUpdate.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_ExpAuction.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_ExpCluster.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_ExpClusterElement.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_ExpFrontier.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_MmControl.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_RecvString.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_MmRobotPosition.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/_ExpFrontierElement.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendString.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_ShutDown.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendOccupancyGrid.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendExpCluster.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_BroadcastString.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendMmControl.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_GetNeighbors.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendQuaternion.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendExpFrontier.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_BroadcastCMgrRobotUpdate.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendExpAuction.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendTwist.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_GetGroupState.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendCMgrRobotUpdate.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_ChangeMCMembership.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendMmPoint.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendMmRobotPosition.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/_SendMmMapUpdate.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/msg/__init__.py"
+  "/home/carasperbeck/ros_ws/devel/lib/python2.7/dist-packages/adhoc_communication/srv/__init__.py"
+)
+
+# Per-language clean rules from dependency scanning.
+FOREACH(lang)
+  INCLUDE(CMakeFiles/adhoc_communication_generate_messages_py.dir/cmake_clean_${lang}.cmake OPTIONAL)
+ENDFOREACH(lang)
