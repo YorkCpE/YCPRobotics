@@ -5,6 +5,8 @@ Repository for YCP robotics research involving ROS. Includes main development en
 
 [packages]: ros packages essential to working installation
 
+[platforms]: drivers and configuration instructions related to the various robotic platforms used (e.g. turtlebot)
+
 [tools]: custom tools for easy ROS operation
 
 [workspace]: default catkin workspace for project development and builds
