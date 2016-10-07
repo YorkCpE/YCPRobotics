@@ -1,2 +1,2 @@
-agitr/FirstLaunchFile:agitr/double_sim:agitr/fast_yellow:agitr/hello:agitr/publevel:agitr/subpose:robot_navigation/aau_multi_robot-master/adhoc_communication:robot_navigation/aau_multi_robot-master/explorer:robot_navigation/aau_multi_robot-master/map_merger
--DCATKIN_DEVEL_PREFIX=/home/carasperbeck/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/carasperbeck/ros_ws/install -G Unix Makefiles
+
+-DCATKIN_DEVEL_PREFIX=/home/jason/YCPRobotics/workspace/devel -DCMAKE_INSTALL_PREFIX=/home/jason/YCPRobotics/workspace/install -G Unix Makefiles

@@ -7,4 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export PWD="/home/carasperbeck/ros_ws/build"
+export CMAKE_PREFIX_PATH="/home/jason/YCPRobotics/workspace/devel:$CMAKE_PREFIX_PATH"
+export PWD="/home/jason/YCPRobotics/workspace/build"
+export ROSLISP_PACKAGE_DIRECTORIES="/home/jason/YCPRobotics/workspace/devel/share/common-lisp"
+export ROS_PACKAGE_PATH="/home/jason/YCPRobotics/workspace/src:$ROS_PACKAGE_PATH"
