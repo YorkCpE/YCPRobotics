@@ -1,8 +1,0 @@
-prefix=/home/carasperbeck/ros_ws/devel
-
-Name: first_launch_file
-Description: Description of first_launch_file
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/carasperbeck/ros_ws/devel/lib 
-Requires: 
