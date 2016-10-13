@@ -1,5 +1,5 @@
-# ros-utilities
-A small library of movement and location utility functions for ROS/Turtlebot.
+# TurtlebotMove.hpp
+A small library of movement and location utility functions for ROS/Turtlebot, provided via a class called Turtlebot.
 
 **Future implementations:**
 * Move using odometry
