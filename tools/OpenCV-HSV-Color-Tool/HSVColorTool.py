@@ -66,12 +66,9 @@ if __name__ == "__main__":
 
             # find contours in the masked image and keep the largest one
             cnts = None
-            if cv2.__version__ == "3.0.0":
-                (cnts, _) = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-            elif cv2.__version__ == "3.1.0":
+            (cnts, _) = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+            if cv2.__version__ == "3.1.0":
                 (_, cnts, _) = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-            else:
-                raise RuntimeError("OpenCV version 3.0.0 or 3.1.0 required! Installed version: " + cv2.__version__)
             if cnts:
                 c = max(cnts, key=cv2.contourArea)
 
