@@ -9,5 +9,3 @@ Repository for YCP robotics research involving ROS. Includes main development en
 
 [tools]: custom tools for easy ROS operation
 
-[workspace]: default catkin workspace for project development and builds
-

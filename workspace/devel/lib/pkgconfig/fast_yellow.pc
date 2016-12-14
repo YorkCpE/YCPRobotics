@@ -1,8 +1,0 @@
-prefix=/home/carasperbeck/ros_ws/devel
-
-Name: fast_yellow
-Description: Description of fast_yellow
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/carasperbeck/ros_ws/devel/lib 
-Requires: 

@@ -1,8 +1,0 @@
-prefix=/home/carasperbeck/ros_ws/install
-
-Name: adhoc_communication
-Description: Description of adhoc_communication
-Version: 0.1.6
-Cflags: -I/home/carasperbeck/ros_ws/install/include
-Libs: -L/home/carasperbeck/ros_ws/install/lib 
-Requires: message_runtime
