@@ -9,3 +9,7 @@ Repository for YCP robotics research involving ROS. Includes main development en
 
 [tools]: custom tools for easy ROS operation
 
+[tutorial]: location for tutorials on common ROS applications
+
+[workspace]: dummy workspace where ROS projects can be developed and reference additional packages
+
